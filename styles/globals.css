@@ -1,0 +1,358 @@
+/*/////////////////////////// START COMMON CSS ////////////////////////////*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #040404;
+  color: #fff;
+  font-size: 20px;
+}
+
+button,
+select,
+option {
+  font-family: "Kanit", sans-serif;
+}
+
+main {
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer {
+  min-height: 80px;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  background-color: transparent;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+sup{
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.error404 {
+  background-image: url("./../404.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.reset-buttom-container {
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 50px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.main-layout {
+  display: flex;
+  padding: 10px;
+}
+/*/////////////////////////// END COMMON CSS ////////////////////////////*/
+
+/*/////////////////////////// START STEPS COMMON ////////////////////////////*/
+.steps-container {
+  display: flex;
+  width: 284px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.step-wrapper {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.step-wrapper h1 {
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.button-85,
+.widget,
+.select-nft-container,
+.select-nft {
+  width: 100%;
+  height: 44px;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #222;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.widget {
+  padding: 0;
+  width: auto;
+  height: auto;
+  border-radius: 18px;
+}
+
+.button-85:before,
+.widget:before,
+.discord-info-container:before,
+.select-nft-container:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 18px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes widget {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after,
+.default-option-nft:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 18px;
+}
+
+.button-85:disabled {
+  color: gray;
+}
+/*///////////////////////////END STEPS COMMON ////////////////////////////*/
+
+/*/////////////////////////// START STEP 1 ////////////////////////////*/
+.nft-list {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 77px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.sing-out-btn {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.wallet-address {
+  display: none;
+}
+
+.nft-image {
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.nft-list li {
+  transform: rotate(-20deg);
+  transition: transform 0.7s ease-in-out;
+}
+
+.nft-list li:nth-child(2) {
+  transform: rotate(20deg);
+  transition: transform 0.7s ease-in-out;
+}
+
+.nft-list li:hover,
+.nft-list li:nth-child(2):hover {
+  transform: rotate(360deg);
+}
+
+.animate {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*/////////////////////////// END STEP 1 ////////////////////////////*/
+
+/*/////////////////////////// START STEP 2 ////////////////////////////*/
+.discord-info-container {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px 6px 18px;
+  box-shadow: rgb(223 223 224) 1px 1px 3px 1px;
+  border-radius: 18px;
+  font-size: 17px;
+  color: black;
+  height: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.discord-info-container:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  border-radius: 18px;
+}
+
+.discord-info-container img {
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+.discord-name-container {
+  font-size: 17px;
+}
+/*/////////////////////////// END STEP 2 ////////////////////////////*/
+
+/*/////////////////////////// START STEP 3 ////////////////////////////*/
+.select-nft-container {
+  padding: 0;
+}
+
+.select-nft {
+  border-radius: 18px;
+  background-color: rgb(34, 34, 34);
+}
+
+.option-nft {
+  background: white;
+  color: black;
+}
+
+.default-option-nft {
+  background: #222;
+  color: white;
+}
+
+/*/////////////////////////// END STEP 3 ////////////////////////////*/
+
+/*/////////////////////////// CHECK NFT ////////////////////////////*/
+.checknft-container{
+  margin-left: 30px;
+}
+
+/*/////////////////////////// CHECK NFT ////////////////////////////*/
+
+/*/////////////////////////// START RESPONSIVE ////////////////////////////*/
+@media (min-width: 1040px) {
+  .reset-buttom-container {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .step-wrapper p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .nft-list {
+    display: none;
+  }
+}
+/*/////////////////////////// END RESPONSIVE ////////////////////////////*/
